@@ -1,0 +1,18 @@
+--- a/setup.py	2024-06-09 18:26:07.655601939 +0000
++++ a/setup.py	2024-06-09 18:26:18.202466818 +0000
+@@ -4,7 +4,7 @@
+ 
+ from setuptools import find_packages, setup
+ 
+-requires = ["sphinx>=4.0", "lxml", "sphinx-needs>=1.0.1"]
++requires = ["sphinx>=4.0", "lxml", "sphinx-needs>=1.0.1", "sphinxcontrib-plantuml"]
+ 
+ with open(os.path.join(os.path.dirname(__file__), "README.rst")) as file:
+     setup(
+@@ -39,5 +39,6 @@
+         packages=find_packages(),
+         include_package_data=True,
+         install_requires=requires,
++        tests_require=requires,
+         namespace_packages=["sphinxcontrib"],
+     )
