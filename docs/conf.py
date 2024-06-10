@@ -266,10 +266,7 @@ linkcheck_workers = 5
 
 # -- Options for PlantUML extension ---------------------------------------
 
-local_plantuml_path = os.path.join(
-    os.path.dirname(__file__), "utils", "plantuml-1.2022.14.jar"
-)
-plantuml = f"java -Djava.awt.headless=true -jar {local_plantuml_path}"
+plantuml = f"plantuml"
 
 # plantuml_output_format = 'png'
 plantuml_output_format = "svg_img"
