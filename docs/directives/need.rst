@@ -153,7 +153,7 @@ Below is an implementation of variants for need options:
       :id: VA_004
       :status: ['variants' in tags and not collapse]:enabled, disabled
       :tags: variants;support
-      :collapse:
+      :collapse: True
 
       Variants for need options in action
 
@@ -366,7 +366,7 @@ Default: False
 
    .. req:: Collapse is set to True
       :tags: collapse; example
-      :collapse:
+      :collapse: True
 
       Only title and content are shown
 
@@ -421,7 +421,7 @@ Default: False
           :status: open
           :tags: user;login
           :links: JINJAID126
-          :jinja_content:
+          :jinja_content: true
 
           Nested need with ``:jinja_content:`` option set to ``true``.
           This requirement has tags: **{{ tags | join(', ') }}**.
@@ -435,7 +435,7 @@ Default: False
     .. spec:: First Spec Need
        :id: JINJAID126
        :status: open
-       :jinja_content:
+       :jinja_content: true
 
        Need with ``:jinja_content:`` equal to ``true``.
        This requirement has status: **{{ status }}**.
