@@ -43,3 +43,5 @@ mem_out.*
 
 pyinstrument*
 *.prof
+
+out
