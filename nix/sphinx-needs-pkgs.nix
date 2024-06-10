@@ -72,6 +72,8 @@ let
       sphinx-needs-pkgs.sphinx-preview
       sphinx-needs-pkgs.sphinx-immaterial
       matplotlib
+      sphinx-copybutton
+      sphinxcontrib-programoutput
     ];
   };
 in 
