@@ -1,0 +1,11 @@
+--- a/pyproject.toml	2024-06-08 14:46:25.387842915 +0000
++++ a/pyproject.toml	2024-06-08 14:49:03.349370844 +0000
+@@ -34,7 +34,7 @@
+ [tool.poetry.dependencies]
+ python = ">=3.8,<4"
+ sphinx = ">=5.0,<8"
+-requests-file = "^1.5.1"  # external links
++requests-file = ">=1.5.1"  # external links
+ requests = "^2.25.1"  # external_links
+ jsonschema = ">=3.2.0"  # needsimport schema validation
+ sphinx-data-viewer = "^0.1.1"  # needservice debug output
