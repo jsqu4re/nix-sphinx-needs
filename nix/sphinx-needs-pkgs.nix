@@ -49,21 +49,19 @@ let
       inherit poetry-core;
     });
     sphinx-immaterial = (import ./sphinx-immaterial.nix{
+      inherit lib;
       inherit buildPythonPackage;
       inherit fetchFromGitHub;
       inherit fetchNpmDeps;
       inherit npmHooks;
       inherit setuptools;
       inherit setuptools-scm;
-      nodejs = nodejs_18;
+      inherit nodejs;
       inherit poetry-core;
       inherit sphinx;
-      inherit markupsafe;
       inherit pydantic;
       inherit pydantic-extra-types;
-      inherit typing-extensions;
       inherit appdirs;
-      inherit requests;
     });
     pkgs = [
       sphinx-needs-pkgs.sphinx-needs
