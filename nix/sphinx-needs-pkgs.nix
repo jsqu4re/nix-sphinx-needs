@@ -56,7 +56,7 @@ let
       inherit npmHooks;
       inherit setuptools;
       inherit setuptools-scm;
-      inherit nodejs;
+      inherit nodejs_18;
       inherit poetry-core;
       inherit sphinx;
       inherit pydantic;

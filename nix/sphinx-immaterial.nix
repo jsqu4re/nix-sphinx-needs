@@ -6,7 +6,7 @@
 , setuptools
 , setuptools-scm
 , poetry-core
-, nodejs
+, nodejs_18
 , sphinx
 , pydantic
 , pydantic-extra-types
@@ -36,7 +36,7 @@ buildPythonPackage rec {
     setuptools
     poetry-core
     setuptools-scm
-    nodejs
+    nodejs_18
     npmHooks.npmConfigHook
   ];
 
