@@ -5,64 +5,19 @@ let
     with pkgs.python3Packages;
     with pkgs.nodePackages;
     {
-    sphinx-needs = (import ./sphinx-needs.nix{
-      inherit buildPythonPackage;
-      inherit fetchFromGitHub;
-      inherit poetry-core;
-      inherit setuptools;
-      inherit jsonschema;
-      inherit requests;
-      inherit requests-file;
-      inherit sphinx;
-      inherit sphinxcontrib-jquery;
-      inherit sphinxcontrib-plantuml;
-      inherit sphinx-design;
+    sphinx-needs = callPackage ./sphinx-needs.nix{
       sphinx-data-viewer = sphinx-needs-pkgs.sphinx-data-viewer;
-    });
-    sphinxcontrib-test-reports = (import ./sphinxcontrib-test-reports.nix{
-      inherit buildPythonPackage;
-      inherit fetchFromGitHub;
-      inherit setuptools;
-      inherit sphinx;
+    };
+    sphinxcontrib-test-reports = callPackage ./sphinxcontrib-test-reports.nix{
       sphinx-needs = sphinx-needs-pkgs.sphinx-needs;
-      inherit sphinxcontrib-plantuml;
-      inherit lxml;
-      inherit pytest;
-    });
-    sphinx-data-viewer = (import ./sphinx-data-viewer.nix{
-      inherit buildPythonPackage;
-      inherit fetchFromGitHub;
-      inherit poetry-core;
-    });
-    sphinx-simplepdf = (import ./sphinx-simplepdf.nix{
-      inherit buildPythonPackage;
-      inherit fetchFromGitHub;
-      inherit setuptools;
-      inherit beautifulsoup4;
-      inherit libsass;
-      inherit sphinx;
-      inherit weasyprint;
-    });
-    sphinx-preview = (import ./sphinx-preview.nix{
-      inherit buildPythonPackage;
-      inherit fetchFromGitHub;
-      inherit poetry-core;
-    });
-    sphinx-immaterial = (import ./sphinx-immaterial.nix{
-      inherit lib;
-      inherit buildPythonPackage;
-      inherit fetchFromGitHub;
-      inherit fetchNpmDeps;
-      inherit npmHooks;
-      inherit setuptools;
-      inherit setuptools-scm;
-      inherit nodejs_18;
-      inherit poetry-core;
-      inherit sphinx;
-      inherit pydantic;
-      inherit pydantic-extra-types;
-      inherit appdirs;
-    });
+    };
+    sphinx-data-viewer = callPackage ./sphinx-data-viewer.nix{ };
+    sphinx-simplepdf = callPackage ./sphinx-simplepdf.nix{ };
+    sphinx-preview = callPackage ./sphinx-preview.nix{ };
+    sphinx-immaterial = callPackage ./sphinx-immaterial.nix{
+      nodejs = nodejs_18;
+    };
+    
     pkgs = [
       sphinx-needs-pkgs.sphinx-needs
       sphinx-needs-pkgs.sphinxcontrib-test-reports

@@ -45,3 +45,4 @@ pyinstrument*
 *.prof
 
 out
+result

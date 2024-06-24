@@ -17,7 +17,6 @@ buildPythonPackage rec {
   pname = "sphinx-immaterial";
   version = "0.11.11";
   format = "pyproject";
-
   src = fetchFromGitHub {
     owner = "jbms";
     repo = "sphinx-immaterial";
@@ -27,9 +26,12 @@ buildPythonPackage rec {
 
   propagatedBuildInputs = [
     sphinx
+    markupsafe
     pydantic
     pydantic-extra-types
+    typing-extensions
     appdirs
+    requests
   ];
 
   nativeBuildInputs = [
