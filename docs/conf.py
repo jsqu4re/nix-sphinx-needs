@@ -20,7 +20,7 @@ language = "en"
 version = release = __version__
 
 # set theme based on environment variable or file
-DOCS_THEME = os.getenv("DOCS_THEME", "alabaster")
+DOCS_THEME = os.getenv("DOCS_THEME", "sphinx_immaterial")
 if (_path := Path(__file__).parent.joinpath("DOCS_THEME")).is_file():
     DOCS_THEME = _path.read_text().strip()
 
