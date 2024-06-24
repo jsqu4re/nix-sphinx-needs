@@ -18,6 +18,21 @@
         "type": "github"
       }
     },
+    "nix-needs": {
+      "locked": {
+        "lastModified": 1719248513,
+        "narHash": "sha256-vSNJ7oJslwVDv40WxJ9jo/0b7Pbs5wbYiIm2VptWbVw=",
+        "owner": "jsqu4re",
+        "repo": "nix-needs",
+        "rev": "a0a95edab17bae0433f211c45ae8d7a45afcfde1",
+        "type": "github"
+      },
+      "original": {
+        "owner": "jsqu4re",
+        "repo": "nix-needs",
+        "type": "github"
+      }
+    },
     "nixpkgs": {
       "locked": {
         "lastModified": 1717602782,
@@ -37,6 +52,7 @@
     "root": {
       "inputs": {
         "flake-utils": "flake-utils",
+        "nix-needs": "nix-needs",
         "nixpkgs": "nixpkgs"
       }
     },
