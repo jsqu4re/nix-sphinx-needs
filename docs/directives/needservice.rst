@@ -74,7 +74,7 @@ their content.
 
 .. need-example::
 
-    .. needservice:: github-issues
+    .. .. needservice:: github-issues
        :query: repo:useblocks/sphinx-needs node latexpdf
        :max_content_lines: 4
        :id_prefix: EXAMPLE_

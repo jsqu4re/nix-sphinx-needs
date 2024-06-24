@@ -20,7 +20,7 @@ Each services creates normally multiple need objects for each element found by q
 
 .. code-block:: rst
 
-    .. needservice:: github-issues
+    .. .. needservice:: github-issues
        :query: repo:useblocks/sphinx-needs node latexpdf
        :max_amount: 1
        :max_content_lines: 4
@@ -37,7 +37,7 @@ Also the content part of ``needservice`` is added as extra data to the end of th
 
 .. code-block:: rst
 
-    .. needservice:: github-issues
+    .. .. needservice:: github-issues
        :query: repo:useblocks/sphinx-needs node latexpdf
        :id_prefix: GH_
        :max_amount: 1
@@ -87,7 +87,7 @@ This loads all open issues, which have the strings *needtable* and *viewports* i
 
 .. code-block:: rst
 
-    .. needservice:: github-issues
+    .. .. needservice:: github-issues
        :query: repo:useblocks/sphinx-needs state:open needtable viewports
 
 
@@ -140,7 +140,7 @@ All options can be overwritten by setting them directly in the need service dire
 
 .. code-block:: rst
 
-    .. needservice:: github-issues
+    .. .. needservice:: github-issues
        :query: repo:useblocks/sphinx-needs
        :type: test
        :max_amount: 10
@@ -172,7 +172,7 @@ directive :ref:`needservice`.
 
 .. code-block:: rst
 
-    .. needservice:: github-issues
+    .. .. needservice:: github-issues
        :query: repo:useblocks/sphinx-needs node latexpdf
        :max_content_lines: 4
        :layout: focus_l
