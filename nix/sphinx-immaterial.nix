@@ -6,11 +6,14 @@
 , setuptools
 , setuptools-scm
 , poetry-core
-, nodejs_18
+, nodejs
 , sphinx
+, markupsafe
+, typing-extensions
 , pydantic
 , pydantic-extra-types
 , appdirs
+, requests
 }:
 
 buildPythonPackage rec {
@@ -38,7 +41,7 @@ buildPythonPackage rec {
     setuptools
     poetry-core
     setuptools-scm
-    nodejs_18
+    nodejs
     npmHooks.npmConfigHook
   ];
 
