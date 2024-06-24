@@ -20,11 +20,11 @@
     },
     "nix-needs": {
       "locked": {
-        "lastModified": 1719260407,
-        "narHash": "sha256-sbFVTB5/hTTozuVf7pPUt4o5Abk15fJRLhXS78LbmI4=",
+        "lastModified": 1719261432,
+        "narHash": "sha256-gkpLKYXztrelml8p8OlIb0XRnjE7/i7GjzIJv+Gbp/o=",
         "owner": "jsqu4re",
         "repo": "nix-needs",
-        "rev": "dc066eb8cd1fcce1ff58b17e708ca452de18fc08",
+        "rev": "14c1e1236ba24a37032e715d987217bbe8e4b8e8",
         "type": "github"
       },
       "original": {

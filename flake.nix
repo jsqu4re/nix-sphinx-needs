@@ -2,8 +2,6 @@
   description = "A basic sphinx needs flake";
 
   inputs = {
-    # nixpkgs-unstable.url = "github:nixos/nixpkgs?ref=nixos-unstable";
-    # nixpkgs-23-11.url = "github:nixos/nixpkgs?ref=nixos-23.11";
     nixpkgs.url = github:nixos/nixpkgs?ref=nixos-unstable;
     flake-utils.url = "github:numtide/flake-utils";
     nix-needs.url = "github:jsqu4re/nix-needs";
@@ -15,7 +13,7 @@
         let
           pkgs = import nixpkgs {
             inherit system;
-            overlays = [ nix-needs.overlays.sphinx-needs ]; 
+            overlays = [ nix-needs.overlays.default ]; 
           };
         in
         {
