@@ -13,7 +13,8 @@
     flake-utils.lib.eachDefaultSystem
       (system:
         let
-          pkgs = import nixpkgs { 
+          pkgs = import nixpkgs {
+            inherit system;
             overlays = [ nix-needs.overlays.sphinx-needs ]; 
           };
         in

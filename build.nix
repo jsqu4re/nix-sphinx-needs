@@ -1,26 +1,33 @@
 { pkgs ? import <nixpkgs> { } }:
-let
-  sphinx-needs-pkgs = import ./nix/sphinx-needs-pkgs.nix { inherit pkgs; };
-in
-  pkgs.stdenv.mkDerivation rec {
-    pname = "nix-sphinx-needs";
-    version = "0.1.0";
 
-    src = pkgs.lib.fileset.toSource {
-      root = ./.;
-      fileset = pkgs.lib.fileset.unions [
-        ./docs
-      ];
-    };
+pkgs.stdenv.mkDerivation rec {
+  pname = "nix-sphinx-needs";
+  version = "0.1.0";
 
-    buildInputs = sphinx-needs-pkgs.pkgs;
+  src = pkgs.lib.fileset.toSource {
+    root = ./.;
+    fileset = pkgs.lib.fileset.unions [
+      ./docs
+    ];
+  };
 
-    buildPhase = ''
-      sphinx-build docs out
-    '';
+  buildInputs = with pkgs; with pkgs.python3Packages; [
+    sphinx-needs
+    sphinxcontrib-test-reports
+    sphinx-simplepdf
+    sphinx-preview
+    sphinx-immaterial
+    matplotlib
+    sphinx-copybutton
+    sphinxcontrib-programoutput
+  ];
 
-    installPhase = ''
-      mkdir -p $out
-      mv out $out
-    '';
-  }
+  buildPhase = ''
+    sphinx-build docs out
+  '';
+
+  installPhase = ''
+    mkdir -p $out
+    mv out $out
+  '';
+}
